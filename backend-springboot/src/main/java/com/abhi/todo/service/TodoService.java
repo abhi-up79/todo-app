@@ -1,12 +1,12 @@
 package com.abhi.todo.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.abhi.todo.model.Todo;
+import com.abhi.todo.model.Todos;
 import com.abhi.todo.repository.TodoRepository;
 
 @Service
@@ -15,8 +15,8 @@ public class TodoService {
     @Autowired
     private TodoRepository todoRepository;
 
-    public List<Todo> getAllTodos() {
-        return todoRepository.findAll();
+    public Todos getAllTodos() {
+        return new Todos(todoRepository.findAll());
     }
 
     public Todo saveTodo(Todo todo) {
