@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { addTodo } from "../Service/todoService";
-
+//@ts-ignore
 const AddTodo = ({onAdd}) => {
     const [title, setTitle] = useState("");
 
