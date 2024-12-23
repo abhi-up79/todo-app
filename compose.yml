@@ -1,0 +1,13 @@
+services: # define the services or containers that make up your application
+
+  web: # name of the first service
+    build: ./frontend-react
+    ports: # list of ports to expose on the host machine
+      - "8080:80"
+    depends_on: # list of services that this service depends on
+      - app
+
+  app: # name of the second service
+    build: ./backend-springboot # path to the directory containing the Dockerfile for this service
+    ports:
+      - "8081:8080"

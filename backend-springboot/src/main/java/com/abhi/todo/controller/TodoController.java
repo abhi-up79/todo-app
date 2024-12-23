@@ -17,7 +17,7 @@ import com.abhi.todo.model.Todo;
 import com.abhi.todo.model.Todos;
 import com.abhi.todo.service.TodoService;
 
-@CrossOrigin(origins = "http://localhost:5173/") // frontend url
+@CrossOrigin(origins = "http://localhost:8080/") // frontend url
 @RestController
 @RequestMapping("/api/todos")
 public class TodoController {

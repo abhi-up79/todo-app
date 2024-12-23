@@ -16,12 +16,14 @@ function App() {
     setTodos(response.data.todos);
   }
 
-  const handleAdd = (newTodo) => {
+  const handleAdd = (newTodo: any) => {
+    // @ts-ignore
     setTodos([...todos, newTodo]);
   }
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: any) => {
     setTodos(todos.filter((todo) => 
+      //@ts-ignore
       todo.id != id
     ))
   }

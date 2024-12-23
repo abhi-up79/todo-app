@@ -1,5 +1,5 @@
 import { deleteTodo } from "../Service/todoService";
-
+//@ts-ignore
 const TodoItem = ({ todo, onDelete}) => {
 
     const handleDelete = async () => {
